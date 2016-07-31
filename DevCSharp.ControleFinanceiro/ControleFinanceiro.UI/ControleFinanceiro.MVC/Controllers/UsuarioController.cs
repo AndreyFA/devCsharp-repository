@@ -42,7 +42,7 @@ namespace ControleFinanceiro.MVC.Controllers
 
                 return RedirectToAction("Index");
             }
-            catch(Exception exception)
+            catch(Exception)
             {
                 return View();
             }
