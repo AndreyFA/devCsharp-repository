@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using ControleFinanceiro.Domain.Entities;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace ControleFinanceiro.UnitTest
 {
@@ -9,6 +10,14 @@ namespace ControleFinanceiro.UnitTest
         public void UsuarioTestsInitialize()
         {
 
+        }
+
+        [TestMethod]
+        public void DeveSerPossivelCriarUmUsuario()
+        {
+            var usuario = Usuario.Factory.CriarUsuario("usuario1", "usuario1", "usuario1Senha");
+
+            Assert.IsNotNull(usuario.DataCadastro);
         }
 
         [TestCleanup]
