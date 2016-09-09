@@ -6,7 +6,7 @@ namespace ControleFinanceiro.Domain.Entities
     public class Usuario
     {
         public int UsuarioId { get; set; }
-        public string NomeCompleto { get; set; }
+        public string NomeCompleto { get; protected set; }
         public string Email { get; set; }
         public string Login { get; protected set; }
         public string Senha { get; protected set; }
@@ -24,6 +24,7 @@ namespace ControleFinanceiro.Domain.Entities
            public static Usuario CriarUsuario(string nomeCompleto, string login, string senha)
             {
                 return new Usuario
+                {
                     NomeCompleto = nomeCompleto,
                     Login = login,
                     Senha = senha

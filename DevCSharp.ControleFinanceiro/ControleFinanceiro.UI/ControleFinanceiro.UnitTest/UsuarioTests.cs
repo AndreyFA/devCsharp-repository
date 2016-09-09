@@ -17,6 +17,7 @@ namespace ControleFinanceiro.UnitTest
         {
             var usuario = Usuario.Factory.CriarUsuario("usuario1", "usuario1", "usuario1Senha");
 
+            Assert.IsNotNull(usuario);
             Assert.IsNotNull(usuario.DataCadastro);
         }
 
